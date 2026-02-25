@@ -78,7 +78,7 @@ export function RSVPForm() {
                 onSubmit={handleSubmit(onSubmit)}
                 className="space-y-8"
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
                   {/* Name Input */}
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-neutral-700 uppercase tracking-widest flex items-center gap-2">
