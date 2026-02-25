@@ -2,3 +2,17 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+  [build]
+  command = "npm run build"
+  publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/src/*"
+  [headers.values]
+    Content-Type = "application/javascript"
