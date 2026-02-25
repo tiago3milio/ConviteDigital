@@ -57,13 +57,13 @@ export function RSVPForm() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-dark p-8 md:p-16 rounded-[2.5rem] shadow-2xl shadow-neutral-200 border border-neutral-100"
+          className="bg-dark p-8 md:p-16 rounded-[2.5rem] shadow-2xl shadow-neutral-700 border border-neutral-700"
         >
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-serif text-neutral-900 mb-4 tracking-tight">
+            <h2 className="text-4xl font-serif text-neutral-300 mb-4 tracking-tight">
               Confirmar Presença
             </h2>
-            <p className="text-neutral-500 font-light max-w-md mx-auto">
+            <p className="text-neutral-200 font-light max-w-md mx-auto">
               Por favor, confirme sua presença até o dia 07 de Março para nos
               ajudar na organização.
             </p>
@@ -81,12 +81,12 @@ export function RSVPForm() {
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
                   {/* Name Input */}
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-neutral-700 uppercase tracking-widest flex items-center gap-2">
+                    <label className="text-sm font-semibold text-neutral-300 uppercase tracking-widest flex items-center gap-2">
                       <User className="w-4 h-4 text-amber-500" /> Nome Completo
                     </label>
                     <input
                       {...register("name", { required: "Nome é obrigatório" })}
-                      className="w-full px-6 py-4 bg-neutral-50 border border-neutral-200 rounded-2xl focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all text-neutral-900 placeholder:text-neutral-400"
+                      className="w-full px-6 py-4 bg-neutral-300 border border-neutral-200 rounded-2xl focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all text-neutral-900 placeholder:text-neutral-800"
                       placeholder="Ex: João Silva"
                     />
                     {errors.name && (
@@ -100,7 +100,7 @@ export function RSVPForm() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {/* Attending Radio */}
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-neutral-700 uppercase tracking-widest block mb-4">
+                    <label className="text-sm font-semibold text-neutral-300 uppercase tracking-widest block mb-4">
                       Você irá comparecer?
                     </label>
                     <div className="flex gap-4">
@@ -111,7 +111,7 @@ export function RSVPForm() {
                           value="yes"
                           className="peer hidden"
                         />
-                        <div className="p-4 text-center border-2 border-neutral-100 rounded-2xl peer-checked:border-amber-400 peer-checked:bg-amber-50 group-hover:bg-neutral-50 transition-all text-neutral-600 font-medium peer-checked:text-amber-700">
+                        <div className="p-4 text-center border-2 border-neutral-700 rounded-2xl peer-checked:border-amber-400 peer-checked:bg-amber-100 group-hover:bg-neutral-600 transition-all text-neutral-300 font-medium peer-checked:text-amber-700">
                           Com certeza!
                         </div>
                       </label>
@@ -122,7 +122,7 @@ export function RSVPForm() {
                           value="no"
                           className="peer hidden"
                         />
-                        <div className="p-4 text-center border-2 border-neutral-100 rounded-2xl peer-checked:border-red-400 peer-checked:bg-red-50 group-hover:bg-neutral-50 transition-all text-neutral-600 font-medium peer-checked:text-red-700">
+                        <div className="p-4 text-center border-2 border-neutral-700 rounded-2xl peer-checked:border-red-400 peer-checked:bg-red-100 group-hover:bg-neutral-600 transition-all text-neutral-300 font-medium peer-checked:text-red-700">
                           Infelizmente não
                         </div>
                       </label>
@@ -131,12 +131,12 @@ export function RSVPForm() {
 
                   {/* Guests Input */}
                   <div className="space-y-2">
-                    <label className="text-sm font-semibold text-neutral-700 uppercase tracking-widest flex items-center gap-2">
+                    <label className="text-sm font-semibold text-neutral-300 uppercase tracking-widest flex items-center gap-2">
                       <Users className="w-4 h-4 text-amber-500" /> Acompanhantes
                     </label>
                     <select
                       {...register("guests")}
-                      className="w-full px-6 py-4 bg-neutral-50 border border-neutral-200 rounded-2xl focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all text-neutral-900 appearance-none"
+                      className="w-full px-6 py-4 bg-neutral-300 border border-neutral-700 rounded-2xl focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all text-neutral-800 appearance-none"
                     >
                       <option value="0">Apenas eu</option>
                       <option value="1">+1 Acompanhante</option>
@@ -148,14 +148,14 @@ export function RSVPForm() {
 
                 {/* Message Input */}
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-neutral-700 uppercase tracking-widest flex items-center gap-2">
+                  <label className="text-sm font-semibold text-neutral-300 uppercase tracking-widest flex items-center gap-2">
                     <MessageSquare className="w-4 h-4 text-amber-500" />{" "}
                     Mensagem para o Francisco (opcional)
                   </label>
                   <textarea
                     {...register("message")}
                     rows={4}
-                    className="w-full px-6 py-4 bg-neutral-50 border border-neutral-200 rounded-2xl focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all text-neutral-900 placeholder:text-neutral-400 resize-none"
+                    className="w-full px-6 py-4 bg-neutral-300 border border-neutral-200 rounded-2xl focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all text-neutral-900 placeholder:text-neutral-800 resize-none"
                     placeholder="Deixe um recado especial..."
                   />
                 </div>
@@ -163,7 +163,7 @@ export function RSVPForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-5 bg-neutral-900 text-white rounded-2xl font-bold uppercase tracking-widest hover:bg-neutral-800 transition-all shadow-xl shadow-neutral-300 disabled:bg-neutral-400 disabled:shadow-none flex items-center justify-center gap-3 active:scale-[0.98]"
+                  className="w-full py-5 bg-neutral-900 text-white rounded-2xl font-bold uppercase tracking-widest cursor-pointer transition-all shadow-xl shadow-neutral-700 disabled:bg-neutral-400 disabled:shadow-none flex items-center justify-center gap-3 active:scale-[0.98]"
                 >
                   {isSubmitting ? (
                     <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -184,16 +184,16 @@ export function RSVPForm() {
                 <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
                   <CheckCircle2 className="w-12 h-12 text-green-500" />
                 </div>
-                <h3 className="text-3xl font-serif text-neutral-900 mb-4">
+                <h3 className="text-3xl font-serif text-neutral-300 mb-4">
                   Confirmação Enviada!
                 </h3>
-                <p className="text-neutral-500 mb-10 max-w-sm mx-auto">
+                <p className="text-neutral-400 mb-10 max-w-sm mx-auto">
                   Sua resposta foi registrada. Mal podemos esperar por este
                   momento especial!
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}
-                  className="px-10 py-4 border border-neutral-200 rounded-full text-neutral-600 hover:bg-neutral-50 transition-colors font-medium"
+                  className="cursor-pointer px-10 bg-neutral-700 py-4 border border-neutral-200 rounded-full text-neutral-300 hover:text-neutral-700 hover:bg-neutral-50 transition-colors font-medium"
                 >
                   Fazer outra confirmação
                 </button>

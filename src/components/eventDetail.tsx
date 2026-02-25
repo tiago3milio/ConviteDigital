@@ -32,7 +32,7 @@ export function EventDetails() {
     <section className="bg-neutral-800 py-24 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif text-neutral-900 mb-4 tracking-tight">
+          <h2 className="text-4xl text-white font-serif text- mb-4 tracking-tight">
             O Grande Momento
           </h2>
           <div className="w-24 h-1 bg-amber-400 mx-auto" />
@@ -46,15 +46,15 @@ export function EventDetails() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="group flex flex-col items-center text-center p-8 bg-neutral-50 rounded-3xl transition-transform duration-300 hover:-translate-y-2 border border-neutral-100 shadow-sm"
+              className="group flex flex-col items-center text-center p-8 bg-neutral-900 rounded-3xl transition-transform duration-300 hover:-translate-y-2 border border-neutral-700 shadow-sm"
             >
-              <div className="mb-6 p-4 bg-white rounded-2xl shadow-sm border border-neutral-100 transform transition-transform group-hover:scale-110">
+              <div className="mb-6 p-4 bg-transparente rounded-2xl shadow-sm border border-neutral-800 transform transition-transform group-hover:scale-110">
                 {detail.icon}
               </div>
-              <h3 className="text-sm font-semibold text-neutral-500 uppercase tracking-widest mb-3">
+              <h3 className="text-sm font-semibold text-neutral-300 uppercase tracking-widest mb-3">
                 {detail.title}
               </h3>
-              <p className="text-xl font-medium text-neutral-900 mb-2">
+              <p className="text-xl font-medium text-neutral-400 mb-2">
                 {detail.content}
               </p>
               <p className="text-sm text-neutral-500 font-light">
@@ -68,11 +68,11 @@ export function EventDetails() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mt-20 w-full h-[400px] relative rounded-3xl overflow-hidden bg-transparent shadow-2xl border-4 border-white"
+          className="mt-20 w-full h-[400px] relative rounded-3xl overflow-hidden bg-transparent shadow-2xl border-2 border-neutral-700"
         >
-           <iframe
+           <iframe className="bg-neutral-800"
             width="100%"
-            height="390"
+            height="398"
             src={`https://maps.google.com/maps?q=${encodeURIComponent("Rua conde de Ariães 48, 1º andar, Bragança")}&output=embed`}
             style={{ border: 0 }}
             allowFullScreen
