@@ -6,12 +6,13 @@ import { toast } from "sonner";
 import ReactConfetti from "react-confetti";
 import { useWindowSize } from "react-use";
 
+import axios from "axios";
+
 type RSVPData = {
   name: string;
-  email: string;
   guests: number;
   message: string;
-  attending: "yes" | "no";
+  attending: "Sim" | "Não";
 };
 
 export function RSVPForm() {
@@ -24,18 +25,17 @@ export function RSVPForm() {
   } = useForm<RSVPData>({
     defaultValues: {
       guests: 0,
-      attending: "yes",
+      attending: "Sim",
     },
   });
 
   const onSubmit = async (data: RSVPData) => {
     // Mocking an API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log("RSVP Received:", data);
+    await axios.post("https://convitedigital-api.onrender.com/mail/send", data)
     setIsSubmitted(true);
     toast.success("Confirmação enviada com sucesso!", {
       description:
-        data.attending === "yes"
+        data.attending === "Sim"
           ? "Mal podemos esperar para te ver lá!"
           : "Sentiremos sua falta, mas obrigado por avisar.",
     });
@@ -79,7 +79,6 @@ export function RSVPForm() {
                 className="space-y-8"
               >
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
-                  {/* Name Input */}
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-neutral-300 uppercase tracking-widest flex items-center gap-2">
                       <User className="w-4 h-4 text-amber-500" /> Nome Completo
@@ -98,7 +97,6 @@ export function RSVPForm() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {/* Attending Radio */}
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-neutral-300 uppercase tracking-widest block mb-4">
                       Você irá comparecer?
@@ -129,7 +127,6 @@ export function RSVPForm() {
                     </div>
                   </div>
 
-                  {/* Guests Input */}
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-neutral-300 uppercase tracking-widest flex items-center gap-2">
                       <Users className="w-4 h-4 text-amber-500" /> Acompanhantes
@@ -146,7 +143,6 @@ export function RSVPForm() {
                   </div>
                 </div>
 
-                {/* Message Input */}
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-neutral-300 uppercase tracking-widest flex items-center gap-2">
                     <MessageSquare className="w-4 h-4 text-amber-500" />{" "}
