@@ -18,7 +18,7 @@ export function Hero() {
           <span className="text-amber-400">CAÓTICOS FC APRESENTAM</span>
           <br /> <br />
           <span className="text-amber-400 tracking-[0.3em] uppercase mb-4 block font-light">
-            especial o aniversário do
+            especial aniversário do
           </span>
           <h1 className="text-6xl md:text-8xl font-serif text-white mb-6 tracking-tight">
             Francisco
@@ -35,7 +35,7 @@ export function Hero() {
               <span className="block text-sm uppercase tracking-widest text-amber-400/80">
                 Data
               </span>
-              <span className="text-lg">08 de Março, 2026</span>
+              <span className="text-lg">08 de Março de 2026</span>
             </div>
             <div className="px-8 py-3 border border-amber-400/30 bg-amber-400/10 backdrop-blur-md rounded-full text-white">
               <span className="block text-sm uppercase tracking-widest text-amber-400/80">
