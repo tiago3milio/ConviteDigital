@@ -29,7 +29,7 @@ export function EventDetails() {
   ];
 
   return (
-    <section className="bg-dark py-24 px-4 overflow-hidden">
+    <section className="bg-neutral-800 py-24 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-serif text-neutral-900 mb-4 tracking-tight">

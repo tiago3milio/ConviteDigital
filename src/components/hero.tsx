@@ -1,10 +1,14 @@
 import { motion } from "motion/react";
-import todos from "../assets/todos.jpeg"
+import todos from "../assets/todos.jpeg";
 
 export function Hero() {
   return (
-    <section className="border-none relative h-screen w-full flex items-center justify-center overflow-hidden">
-          <img className="absolute brightness-[0.2] blur-[1.2px]  h-screen w-full" src={todos} alt="" />
+    <section className="border-none bg-neutral-900 relative h-screen w-full flex items-center justify-center overflow-hidden">
+      <img
+        className="absolute  brightness-[0.2] blur-[1.2px]  h-screen w-full"
+        src={todos}
+        alt=""
+      />
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -49,9 +53,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <div className="w-[1px] h-16 bg-gradient-to-b from-amber-400 to-transparent mx-auto" />
-        </motion.div>
+        ></motion.div>
       </div>
     </section>
   );

@@ -42,7 +42,7 @@ export function RSVPForm() {
   };
 
   return (
-    <section id="rsvp" className="relative bg-neutral-50 py-24 px-4">
+    <section id="rsvp" className="relative bg-neutral-800 py-24 px-4">
       {isSubmitted && (
         <ReactConfetti
           width={width}

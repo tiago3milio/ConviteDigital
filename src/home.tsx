@@ -1,3 +1,4 @@
+
 import { motion, useScroll, useSpring } from "motion/react";
 import { Hero } from "./components/hero";
 import { Countdown } from "./components/countdown";
@@ -11,7 +12,7 @@ export function Home() {
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001,
+    restDelta: 0.001
   });
 
   return (
