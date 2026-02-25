@@ -3,7 +3,7 @@ import todos from "../assets/todos.jpeg"
 
 export function Hero() {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section className="border-none relative h-screen w-full flex items-center justify-center overflow-hidden">
           <img className="absolute brightness-[0.2] blur-[1.2px]  h-screen w-full" src={todos} alt="" />
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <motion.div

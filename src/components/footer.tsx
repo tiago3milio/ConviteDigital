@@ -2,7 +2,7 @@ import { Smile } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-50 py-12 border-t border-neutral-200">
+    <footer className="bg-neutral-900 py-12 border-t border-neutral-200">
       <div className="max-w-4xl mx-auto text-center px-4">
         <Smile className="w-6 h-6 text-red-500 mx-auto mb-4 animate-pulse" />
         <p className="text-neutral-500 text-sm font-light uppercase tracking-widest">

@@ -57,7 +57,7 @@ export function RSVPForm() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white p-8 md:p-16 rounded-[2.5rem] shadow-2xl shadow-neutral-200 border border-neutral-100"
+          className="bg-dark p-8 md:p-16 rounded-[2.5rem] shadow-2xl shadow-neutral-200 border border-neutral-100"
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-serif text-neutral-900 mb-4 tracking-tight">
